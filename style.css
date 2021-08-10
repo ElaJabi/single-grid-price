@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+:root{
+    --Cyan: rgb(42, 178, 175);
+    --Cyan-light: rgb(42, 178, 175, .9);
+    --Bright-Yellow: rgb(192, 223, 52);
+    --Light-Gray: rgb(229, 239, 245);
+    --Grayish-Blue: rgb(193, 209, 235);
+  }
+
+html {
+    font-size: 90%;
+}
+
+body {
+    padding: 5rem 20%;
+    height: 100vh;
+    background-color: var(--Light-Gray);
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: .7fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "head head"
+      "grid-1 grid-2"
+      ". ."; 
+
+  }
+
+.head { 
+    grid-area: head; 
+    padding: 4rem ;
+    background: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.head h1 {
+    color:var(--Cyan);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.head h2 {
+    color:var(--Bright-Yellow);
+    margin-bottom: 1rem;
+}
+
+.head p {
+    color: grey;
+    line-height: 1.5;
+}
+
+
+  .grid-1 {
+       grid-area: grid-1; 
+       background-color: var(--Cyan);
+       padding: 3rem;
+       
+
+
+}
+
+.grid-1 h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.grid-1 .price {
+
+    
+    
+    
+}
+
+.grid-1 .price p {
+    
+    align-self: center;
+    color: white;
+    margin-top: 1rem;
+    font-size: 2rem;
+    
+    
+}
+
+.grid-1 .price span {
+    color: var(--Light-Gray);
+    font-size: 1rem;
+
+}
+
+.grid-1 p {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.grid-1 button {
+    color: white;
+    background:rgb(192, 223, 52);
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+    width: 100%;
+    
+}
+
+  .grid-2 { 
+      grid-area: grid-2; 
+      background-color: var(--Cyan-light);
+      padding: 3rem;
+     
+    
+
+}
+
+.grid-2 h3 {
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.grid-2 ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.grid-2 ul li {
+    padding: .2rem 0;
+    color: white;
+}
+
+
+ 
+
+
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 70%;
+
+    }
+
+    body{
+        padding: 4rem 20%;
+    }
+
+    .container {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: .7fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "head head"
+          "grid-1 grid-1"
+          "grid-2 grid-2"; 
+          
+      }
+      .head { grid-area: head; }
+      .grid-1 { 
+          grid-area: grid-1;
+    
+    }
+      .grid-2 { grid-area: grid-2; }
+
+    .head {
+        padding: 2rem;
+    }
+
+    .grid-1 {
+        padding: 2rem 2rem;
+        border-radius: none;
+    
+    }
+
+    .grid-2  {
+        padding: 2rem 2rem;
+       
+
+    }
+}
+
+@media (max-width: 478px) {
+
+    html {
+        font-size: 70%;
+
+    }
+
+    body{
+        padding: 4rem 10%;
+    }
+
+}
